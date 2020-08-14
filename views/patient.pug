@@ -1,0 +1,30 @@
+extends layout
+block content
+    .container
+        .row
+            .col-md-8.offset-md-2
+                a(href="/" class="btn btn-dark") Register Patient
+                table(class="table table-striped")
+                    thead
+                        tr
+                            th(scope="col")
+                            th(scope="col") Surname
+                            th(scope="col") Given Name
+                            th(scope="col") Place of residence
+                            th(scope="col")                           
+                       
+                   
+                    tbody
+                        each patient in patients
+                            tr
+                                th(scope="row") 
+                                td=  patient.surname
+                                td= patient.givenname 
+                                td= patient.placeofresidence
+                                td  
+                                    a(href="/patient/"+employee.id class="btn btn-primary") View Registered Patients
+                        
+                        
+                        
+                        
+                    

@@ -1,0 +1,67 @@
+extends layout
+block content
+    .container
+        .row
+            .col-md-8.offset-md-2
+                form(action="/form",method="POST" id="formreg" name="form")
+                    div
+                        img(src="flag.jpg" alt="")
+                        h2(class="text-center") Ministry of Health
+                        h1(class="text-center") COVID-19 (CORONA VIRUS)
+                        h4(class="text-center") Virus-Test Registration Form
+                        div(class="form-row")
+                            div(class="form-group col-md-6")
+                                label(for="surname") 
+                                strong Surname
+                                input(type="text" class="form-control" id="surname" name="surname")
+                            div(class="error" id="surnameErr")
+                            
+                            div(class="form-group col-md-6")
+                                label(for="givenname") 
+                                strong Given name
+                                input(type="text" class="form-control" id="givenname" name="givenname")
+                        
+                    
+                            div(class="form-group col-md-6")
+                                label(for="dateofbirth") 
+                                strong Date of Birth
+                                input(type="date" class="form-control" id="dateofbirth" name="dateofbirth" placeholder="YY/MM/DD")
+
+                            div(class="form-group col-md-6")
+                                label(for="placeofresidence") place of Residence
+                                input(type="text" class="form-control" id="placeofbirth" name="placeofbirth")
+                        
+                        
+                            div(class="form-group col-md-6 ")
+                                label(for="occupation") 
+                                strong Occupation
+                                input(type="text" class="form-control" id="occupation" name="occupation")
+
+                            div(class="form-group col-md-6")
+                                label(for="nationality") 
+                                strong Nationality
+                                input(type="text" class="form-control" id="nationality" name="nationality")
+
+                            div(class="form-group col-md-12")
+                                input(type="text" id="gender" name="gender")
+                                label(for="male") 
+                                strong Gender
+                                br
+                                input(type="radio" id="male" name="gender" value="male")
+                                label(for="male") Male
+
+                                input(type="radio" id="female" name="gender" value="female")
+                                label(for="female") Female
+                            
+                            
+                            div(class="form-group col-md-12")
+                                    label(for="category") 
+                                    strong category
+                                    select(id="category" class="form-control" name="category")
+                                        option(selected value="") select Category
+                                        option(selected value="") age
+                                        
+                        .row
+                            .col-4.offset-8
+                                button(type="submit" class="btn btn-primary") Register
+                
